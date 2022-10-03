@@ -23,12 +23,12 @@
                   <Font name="Comic Sans MS" size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="95.0" layoutY="39.0" prefHeight="32.0" prefWidth="140.0" text="Decide your choice" underline="true">
+            <Label alignment="CENTER" layoutX="95.0" layoutY="65.0" prefHeight="32.0" prefWidth="140.0" text="Decide your choice" underline="true">
                <font>
                   <Font name="Comic Sans MS" size="15.0" />
                </font>
             </Label>
-            <Button layoutX="42.0" layoutY="88.0" mnemonicParsing="false" onAction="#onRockClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: empty;">
+            <Button layoutX="42.0" layoutY="105.0" mnemonicParsing="false" onAction="#onRockClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: empty;">
                <graphic>
                   <ImageView fitHeight="90.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -36,7 +36,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button layoutX="128.0" layoutY="88.0" mnemonicParsing="false" onAction="#onPaperClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: empty;">
+            <Button layoutX="128.0" layoutY="105.0" mnemonicParsing="false" onAction="#onPaperClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: empty;">
                <graphic>
                   <ImageView fitHeight="90.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -44,7 +44,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button layoutX="211.0" layoutY="88.0" mnemonicParsing="false" onAction="#onScissorsClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: empty;">
+            <Button layoutX="211.0" layoutY="105.0" mnemonicParsing="false" onAction="#onScissorsClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: empty;">
                <graphic>
                   <ImageView fitHeight="90.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -52,36 +52,46 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Label alignment="CENTER" layoutX="161.0" layoutY="1.0" prefHeight="32.0" prefWidth="119.0" text="Computer score:">
+            <Label alignment="CENTER" layoutX="6.0" layoutY="31.0" prefHeight="32.0" prefWidth="119.0" text="Computer score:">
                <font>
                   <Font name="Comic Sans MS" size="15.0" />
                </font>
             </Label>
-            <Label fx:id="computerScore" layoutX="282.0" layoutY="2.0" prefHeight="32.0" prefWidth="30.0" text="0" textFill="RED">
+            <Label fx:id="computerScore" layoutX="127.0" layoutY="32.0" prefHeight="32.0" prefWidth="30.0" text="0" textFill="RED">
                <font>
                   <Font name="Comic Sans MS" size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="57.0" layoutY="159.0" prefHeight="32.0" prefWidth="48.0" text="Rock">
+            <Label alignment="CENTER" layoutX="57.0" layoutY="179.0" prefHeight="32.0" prefWidth="48.0" text="Rock">
                <font>
                   <Font name="Comic Sans MS" size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="220.0" layoutY="159.0" prefHeight="32.0" prefWidth="60.0" text="Scissor">
+            <Label alignment="CENTER" layoutX="220.0" layoutY="179.0" prefHeight="32.0" prefWidth="60.0" text="Scissor">
                <font>
                   <Font name="Comic Sans MS" size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="135.0" layoutY="159.0" prefHeight="32.0" prefWidth="60.0" text="Paper">
+            <Label alignment="CENTER" layoutX="135.0" layoutY="179.0" prefHeight="32.0" prefWidth="60.0" text="Paper">
                <font>
                   <Font name="Comic Sans MS" size="15.0" />
                </font>
             </Label>
-            <Button layoutX="103.0" layoutY="210.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="32.0" prefWidth="130.0" style="-fx-background-color: #87CEEB; -fx-background-radius: 30;" text="Back" textFill="RED">
+            <Button layoutX="103.0" layoutY="223.0" mnemonicParsing="false" onAction="#totalPlayerPoint" prefHeight="32.0" prefWidth="130.0" style="-fx-background-color: #87CEEB; -fx-background-radius: 30;" text="Back" textFill="RED">
                <font>
                   <Font name="Comic Sans MS" size="20.0" />
                </font>
             </Button>
+            <Label fx:id="player1" alignment="CENTER" layoutX="228.0" layoutY="2.0" prefHeight="32.0" prefWidth="60.0" text=" Round:">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalRound" layoutX="288.0" layoutY="3.0" prefHeight="32.0" prefWidth="30.0" text="0" textFill="RED">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

@@ -25,12 +25,15 @@ public class Play implements Initializable {
     private Label playerScore;
     @FXML
     private Label computerScore;
+    @FXML
+    private Label totalRound;
 
+    //Variables
     int computerNumberChoice;
     int playerNumberChoice;
-
     int p_score = 0;
     int c_score = 0;
+    int round = 1;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -39,6 +42,7 @@ public class Play implements Initializable {
     }
 
     public void computerChoice() {
+        totalRound.setText(String.valueOf(round));
         int[] array = {1, 2, 3}; // {rock, paper, scissors}
         computerNumberChoice = array[new Random().nextInt(array.length)];
         System.out.println("Computer choice: " + computerNumberChoice);
@@ -49,6 +53,7 @@ public class Play implements Initializable {
      */
     //Rock
     public void onRockClick(ActionEvent event) {
+        round+= 1;
         playerNumberChoice = 1;
         System.out.println("Player choice: " + playerNumberChoice);
         if (computerNumberChoice == 1) {
@@ -64,6 +69,7 @@ public class Play implements Initializable {
 
     //Paper
     public void onPaperClick(ActionEvent event) {
+        round += 1;
         playerNumberChoice = 2;
         System.out.println("Player choice: " + playerNumberChoice);
         if (computerNumberChoice == 2) {
@@ -79,6 +85,7 @@ public class Play implements Initializable {
 
     //Scissors
     public void onScissorsClick(ActionEvent event) {
+        round += 1;
         playerNumberChoice = 3;
         System.out.println("Player choice: " + playerNumberChoice);
         if (computerNumberChoice == 3) {
@@ -143,5 +150,20 @@ public class Play implements Initializable {
         Parent addParent = loader.load();
         Scene addScene = new Scene(addParent);
         stage.setScene(addScene);
+    }
+
+    public void totalPlayerPoint(ActionEvent event) throws IOException {
+        if (round > 1) {
+            round -= 1;
+        }
+        Alert summary = new Alert(Alert.AlertType.CONFIRMATION, "Player summary", ButtonType.OK);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        summary.setContentText(Player.name + " scores " + p_score + " after " + round + " rounds.");
+        summary.initModality(Modality.APPLICATION_MODAL);
+        summary.initOwner(stage);
+        summary.showAndWait();
+        if (summary.getResult() == ButtonType.OK) {
+            onBackButtonClick(event);
+        }
     }
 }
