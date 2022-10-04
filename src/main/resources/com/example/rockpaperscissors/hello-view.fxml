@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -42,7 +43,7 @@
                         <Font name="Comic Sans MS" size="20.0" />
                     </font>
                 </Button>
-                <Label alignment="CENTER" layoutX="60.0" layoutY="284.0" prefHeight="32.0" prefWidth="212.0" text="Made by: Acus" textFill="BLUE">
+                <Label alignment="CENTER" layoutX="102.0" layoutY="284.0" prefHeight="32.0" prefWidth="82.0" text="Made by: " textFill="BLUE">
                     <font>
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
@@ -58,6 +59,11 @@
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
             </Label>
+            <Hyperlink layoutX="178.0" layoutY="283.0" onAction="#onLinkProfileClick" text="Acus" textFill="BLUE" underline="true">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Hyperlink>
             </children>
         </Pane>
     </children>

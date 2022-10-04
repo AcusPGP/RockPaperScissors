@@ -18,7 +18,10 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.awt.Desktop;
+import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -87,6 +90,16 @@ public class Controller implements Initializable {
             Platform.exit();
         } else {
             exitAlert.close();
+        }
+    }
+
+    // Acus Project Link
+    public void onLinkProfileClick() {
+        try {
+            URL url = new URL("https://github.com/AcusPGP");
+            Desktop.getDesktop().browse(url.toURI());
+        } catch (IOException | URISyntaxException e) {
+            e.printStackTrace();
         }
     }
 }
